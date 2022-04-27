@@ -24,12 +24,13 @@
 => 3% 이내에서 사용해야 좋은 선택도를 가짐.
 
 [클러스터 넌클러스터 인덱스 이해도](https://mozi.tistory.com/320)
-
-
+***
 ## PrimaryKey 와 Unique Key의 차이
 * 일반적으로 PrimaryKey 가 UniqueKey에 속해있다고 본다.   
 * 두 Key의 공통점은 유일성 보장과 중복값을 허용하지 않는다.    
-* 둘의 가장 큰 차이점은 PrimaryKey는 NULL값을 허용하지 않고 UniqueKey는 NULL 값을 허용
+* 둘의 가장 큰 차이점은 PrimaryKey는 NULL값을 허용하지 않고 UniqueKey는 NULL 값을 허용   
+***
+# Join
 
 ## Inner Join
 * 기준 테이블과 조인 테이블에 조이 컬럼에 해당하는 값이 모두 존재하는 경우의 데이터가 조회
@@ -45,6 +46,6 @@
 
 ## Cross Join
 * 크로스 조인은 기준 테이블의 행을 조인 테이블 행만큼 증가 시킴.   
-
+***
 
  
