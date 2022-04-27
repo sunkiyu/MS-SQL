@@ -24,3 +24,27 @@
 => 3% 이내에서 사용해야 좋은 선택도를 가짐.
 
 [클러스터 넌클러스터 인덱스 이해도](https://mozi.tistory.com/320)
+
+
+## PrimaryKey 와 Unique Key의 차이
+* 일반적으로 PrimaryKey 가 UniqueKey에 속해있다고 본다.   
+* 두 Key의 공통점은 유일성 보장과 중복값을 허용하지 않는다.    
+* 둘의 가장 큰 차이점은 PrimaryKey는 NULL값을 허용하지 않고 UniqueKey는 NULL 값을 허용
+
+## Inner Join
+* 기준 테이블과 조인 테이블에 조이 컬럼에 해당하는 값이 모두 존재하는 경우의 데이터가 조회
+
+## Outer Join(Left,Right Outer Join)
+* Outer Join에서 LEFT, RIGHT는 기준 테이블을 지칭한다.   
+* 기준 테이블의 데이터는 모두 조회되고 나머지는 조인 테이블에 값이 있는 것이 조회된다.   
+* 대부분 Left Outer Join을 사용한다.   
+* Outer Join을 사용하는 이유는 기준 테이블의 데이터를 누락 없이 조회하고 참조 테이블의 값이 있는 경우 해당 값을 사용하기 위함이다.   
+
+## Full Outer Join
+* 두 테이블을 합쳐서 조회한다.   
+
+## Cross Join
+* 크로스 조인은 기준 테이블의 행을 조인 테이블 행만큼 증가 시킴.   
+
+
+ 
