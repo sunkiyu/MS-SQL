@@ -33,7 +33,7 @@
 # Join
 
 ## Inner Join
-* 기준 테이블과 조인 테이블에 조이 컬럼에 해당하는 값이 모두 존재하는 경우의 데이터가 조회
+* 기준 테이블과 조인 테이블에 컬럼에 해당하는 값이 모두 존재하는 경우의 데이터가 조회
 
 ## Outer Join(Left,Right Outer Join)
 * Outer Join에서 LEFT, RIGHT는 기준 테이블을 지칭한다.   
