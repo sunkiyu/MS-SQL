@@ -21,6 +21,19 @@ int main()
   char stringBuffer[MAX_PATH] = "Driver = {SQL Server Native Client 11.0};UID=ID;PWD=pwd;SERVER=192.168.1.1;";
   char resultBuffer[MAX_PATH] = {0,};
   
+	SQLSMALLINT resultLen = 0;
+
+	SQLRETURN ret = ::SQLDriverConnectA(
+		_connection,
+		NULL,
+		reinterpret_cast<SQLCHAR*>(stringBuffer),
+		_countof(stringBuffer),
+		OUT reinterpret_cast<SQLCHAR*>(resultBuffer),
+		_countof(resultString),
+		OUT & resultStringLen,
+		SQL_DRIVER_NOPROMPT
+	);
+  
   return 0;
 }
 ```
