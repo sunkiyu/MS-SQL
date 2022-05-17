@@ -32,6 +32,39 @@ int main()
 		OUT & resultStringLen,
 		SQL_DRIVER_NOPROMPT
 	);
+	
+	SQLHSTMT _statement;
+	if(::SQLAllocHandle(SQL_HANDLE_STMT, _connection, &_statement) != SQL_SUCCESS)
+	   return 0;
+	
+	char EmpType[21] = {0,}, empNum[50] = {0,};
+	SQLLEN empLen =0, empNumLen =0;
+	SQLRETURN bindRet = ::SQLBindCol(_statement,1,SQL_C_CHAR,EmpType,sizeof(EmpType), &empLen);
+	bindRet = ::SQLBindCol(_statement,2,SQL_C_CHAR,empNum,sizeof(empNum), &empNumLen);
+	
+	switch(bindRet)
+	{
+	      case SQL_SUCCESS:
+		  break;
+	      case SQL_SUCCESS_WITH_INFO:
+	          break;
+	      case SQL_NO_DATA:
+	          break;
+	      case SQL_ERROR:
+	          break;
+	}
+	   
+	char query[1024]  = "SELECT empNo, empNames FROM TABLE_Employee";
+	if(ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
+	{
+	      if(::SQLExecDirecA(_statement, reinterpret_cast<SQLCHAR*>(query), SQL_NTSL) != SQL_SUCCESS)
+	      	 return 0;
+		 
+     	      while(::SQLFetch(_statement) == SQL_SUCCESS || ::SQLFetch(_statement) == SQL_SUCCESS_WITH_INFO)
+	      {
+	      
+	      }
+	}
   
   return 0;
 }
